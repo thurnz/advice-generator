@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/thurnz/advice-generator)
-- Live Site URL: [Add live site URL here](https://advice-generator-beryl-nu.vercel.app/)
+- [Solution](https://github.com/thurnz/advice-generator)
+- [Live Site](https://advice-generator-beryl-nu.vercel.app/)
 
 ## My process
 

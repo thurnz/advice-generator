@@ -6,7 +6,7 @@ export default function Home() {
   const [data, seData] = useState<{ advice: string; id: number } | null>(null);
 
   const handleData = async () => {
-    await fetch("https://api.adviceslip.com/advice")
+    await fetch(`https://api.adviceslip.com/advice?cache=${Date.now()}`)
       .then((res) => res.json())
       .then((data) => seData(data.slip));
   };

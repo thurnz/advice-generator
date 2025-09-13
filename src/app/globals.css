@@ -1,26 +1,55 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-blue-200: hsl(193, 38%, 86%);
+  --color-blue-600: hsl(217, 19%, 38%);
+  --color-blue-900: hsl(217, 19%, 24%);
+  --color-blue-950: hsl(218, 23%, 16%);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-green-300: hsl(150, 100%, 66%);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-blue-950);
+  color: var(--color-blue-200);
+  font-family: var(--font-manrope);
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+h1 {
+  color: var(--color-green-300);
+  font-size: 0.75rem;
+  letter-spacing: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  background: var(--color-green-300);
+}
+
+button:hover,
+button:active {
+  filter: drop-shadow(0 0 1rem var(--color-green-300));
+}
+
+.divider {
+  width: 100%;
+  height: 1rem;
+  margin: 1.25rem auto;
+  background: url(/images/pattern-divider-mobile.svg) center center / auto 100%
+    no-repeat;
+}
+
+@media (width > 20rem) {
+  .divider {
+    background-image: url(/images/pattern-divider-desktop.svg);
+  }
 }
